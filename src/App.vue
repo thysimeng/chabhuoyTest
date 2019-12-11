@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
+    <h2>Essential Links</h2> -->
+    <!-- <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
       <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
@@ -15,7 +15,7 @@
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    </ul> -->
 
     <div class="form-group">
       <label for="">Username</label>
@@ -26,10 +26,16 @@
       <input type="text" class="form-control" v-model="user.email">
     </div>
     <button class="btn btn-primary" @click="submit">Submit</button>
+    <parent></parent>
+    <!-- <child></child> -->
+    <!-- <childEditor></childEditor> -->
   </div>
 </template>
 
 <script>
+import parent from './components/parent.vue'
+import child from './components/child.vue'
+import childEditor from './components/child editor.vue'
 export default {
   name: 'app',
   data () {
@@ -50,6 +56,11 @@ export default {
         console.log(error);
       });
     }
+  },
+  components: {
+    parent,
+    child,
+    childEditor
   }
 }
 </script>
