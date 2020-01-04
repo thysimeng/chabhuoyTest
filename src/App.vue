@@ -27,12 +27,14 @@
     </div>
     <button class="btn btn-primary" @click="submit">Submit</button>
     <parent></parent>
+    <formvue></formvue>
     <!-- <child></child> -->
     <!-- <childEditor></childEditor> -->
   </div>
 </template>
 
 <script>
+import formvue from './components/form.vue'
 import parent from './components/parent.vue'
 import child from './components/child.vue'
 import childEditor from './components/child editor.vue'
@@ -60,7 +62,8 @@ export default {
   components: {
     parent,
     child,
-    childEditor
+    childEditor,
+    formvue
   }
 }
 </script>
